@@ -37,14 +37,19 @@ public class IrrationalAgents extends SimpleTeseoAgentProgram {
         					k = 0;
         					matriz[x][y]= 1;
         					y = y-1;
+        					orientacion = 0;
+        					break;
         				case 1:
         					if(PD && PA && PI){
         						matriz[x][y]=2;
         						y = y-1;
+        						orientacion = 0;
         					}
+        					break;
         				case 2:
         					break;
         			}
+        			break;
                 }
                 if(!PD){
                 	matriz[x+1][y]= 0;
@@ -54,15 +59,18 @@ public class IrrationalAgents extends SimpleTeseoAgentProgram {
 	    					matriz[x][y]= 1;
 	    					x = x+1;
 	    					orientacion = 1;
+	    					break;
 	    				case 1:
 	    					if(PF && PA && PI){
 	    						matriz[x][y]=2;
 	    						x = x+1;
 	    						orientacion = 1;
 	    					}
+	    					break;
 	    				case 2:
 	    					break;
 	    			}
+                	break;
                 }
                 if(!PA){
                 	matriz[x][y+1]= 0;
@@ -72,15 +80,18 @@ public class IrrationalAgents extends SimpleTeseoAgentProgram {
 	    					matriz[x][y]= 1;
 	    					y = y+1;
 	    					orientacion = 2;
+	    					break;
 	    				case 1:
 	    					if(PF && PD && PI){
 	    						matriz[x][y]=2;
 	    						y = y+1;
 	    						orientacion = 2;
 	    					}
+	    					break;
 	    				case 2:
 	    					break;
 	    			}
+                	break;
                 }
                 if(!PI){
                 	matriz[x-1][y]= 0;
@@ -90,33 +101,39 @@ public class IrrationalAgents extends SimpleTeseoAgentProgram {
 	    					matriz[x][y]= 1;
 	    					x = x-1;
 	    					orientacion = 3;
+	    					break;
 	    				case 1:
 	    					if(PF && PD && PA){
 	    						matriz[x][y]=2;
 	    						x = x-1;
 	    						orientacion = 3;
 	    					}
+	    					break;
 	    				case 2:
 	    					break;
 	    			}
+                	break;
                 }
-            
+                break;
         	case 1: //Orientacion a la Derecha
         		if(!PF){
         			matriz[x+1][y]= 0;
         			switch(matriz[x+1][y]){
         				case 0:
-        					k = 1;
+        					k = 0;
         					matriz[x][y]= 1;
         					x = x+1;
+        					break;
         				case 1:
         					if(PD && PA && PI){
         						matriz[x][y]=2;
         						x = x+1;
         					}
+        					break;
         				case 2:
         					break;
         			}
+        			break;
                 }
                 if(!PD){
                 	matriz[x][y+1]= 0;
@@ -126,15 +143,18 @@ public class IrrationalAgents extends SimpleTeseoAgentProgram {
         					matriz[x][y]= 1;
         					y = y+1;
         					orientacion = 2;
+        					break;
         				case 1:
         					if(PF && PA && PI){
         						matriz[x][y]=2;
         						y = y+1;
         						orientacion = 2;
         					}
+        					break;
         				case 2:
         					break;
         			}
+        			break;
                 }
                 if(!PA){
                 	matriz[x-1][y]= 0;
@@ -144,15 +164,18 @@ public class IrrationalAgents extends SimpleTeseoAgentProgram {
         					matriz[x][y]= 1;
         					x = x-1;
         					orientacion = 3;
+        					break;
         				case 1:
         					if(PF && PD && PI){
         						matriz[x][y]=2;
         						x = x-1;
         						orientacion = 3;
         					}
+        					break;
         				case 2:
         					break;
         			}
+        			break;
                 }
                 if(!PI){
                 	matriz[x][y+1]= 0;
@@ -162,50 +185,188 @@ public class IrrationalAgents extends SimpleTeseoAgentProgram {
         					matriz[x][y]= 1;
         					y = y-1;
         					orientacion = 0;
+        					break;
         				case 1:
         					if(PF && PD && PA){
         						matriz[x][y]=2;
         						y = y-1;
         						orientacion = 0;
         					}
+        					break;
         				case 2:
         					break;
         			}
-                } 
-        	case 2:
+        			break;
+                }
+                break;
+        	case 2: //Orientacion a la Atras
         		if(!PF){
-                	k = 3;
-                	orientacion = 3;
+        			matriz[x][y+1]= 0;
+        			switch(matriz[x][y+1]){
+        				case 0:
+        					k = 0;
+        					matriz[x][y]= 1;
+        					x = x+1;
+        					break;
+        				case 1:
+        					if(PD && PA && PI){
+        						matriz[x][y]=2;
+        						x = x+1;
+        					}
+        					break;
+        				case 2:
+        					break;
+        			}
+        			break;
                 }
                 if(!PD){
-                	k = 3;
-                	orientacion = 3;
+                	matriz[x][y+1]= 0;
+        			switch(matriz[x][y+1]){
+        				case 0:
+        					k = 2;
+        					matriz[x][y]= 1;
+        					y = y+1;
+        					orientacion = 2;
+        					break;
+        				case 1:
+        					if(PF && PA && PI){
+        						matriz[x][y]=2;
+        						y = y+1;
+        						orientacion = 2;
+        					}
+        					break;
+        				case 2:
+        					break;
+        			}
+        			break;
                 }
                 if(!PA){
-                	k = 3;
-                	orientacion = 3;
+                	matriz[x-1][y]= 0;
+        			switch(matriz[x-1][y]){
+        				case 0:
+        					k = 3;
+        					matriz[x][y]= 1;
+        					x = x-1;
+        					orientacion = 3;
+        					break;
+        				case 1:
+        					if(PF && PD && PI){
+        						matriz[x][y]=2;
+        						x = x-1;
+        						orientacion = 3;
+        					}
+        					break;
+        				case 2:
+        					break;
+        			}
+        			break;
                 }
                 if(!PI){
-                	k = 3;
-                	orientacion = 3;
-                }         		
-        	case 3:
+                	matriz[x][y+1]= 0;
+        			switch(matriz[x][y+1]){
+        				case 0:
+        					k = 0;
+        					matriz[x][y]= 1;
+        					y = y-1;
+        					orientacion = 0;
+        					break;
+        				case 1:
+        					if(PF && PD && PA){
+        						matriz[x][y]=2;
+        						y = y-1;
+        						orientacion = 0;
+        					}
+        					break;
+        				case 2:
+        					break;
+        			}
+        			break;
+                }
+                break;
+        	case 3: //Orientacion a la Izquierda
         		if(!PF){
-                	k = 3;
-                	orientacion = 3;
+        			matriz[x-1][y]= 0;
+        			switch(matriz[x-1][y]){
+        				case 0:
+        					k = 0;
+        					matriz[x][y]= 1;
+        					x = x-1;
+        					break;
+        				case 1:
+        					if(PD && PA && PI){
+        						matriz[x][y]=2;
+        						x = x-1;
+        					}
+        					break;
+        				case 2:
+        					break;
+        			}
+        			break;
                 }
                 if(!PD){
-                	k = 3;
-                	orientacion = 3;
+                	matriz[x][y+1]= 0;
+        			switch(matriz[x][y+1]){
+        				case 0:
+        					k = 2;
+        					matriz[x][y]= 1;
+        					y = y+1;
+        					orientacion = 2;
+        					break;
+        				case 1:
+        					if(PF && PA && PI){
+        						matriz[x][y]=2;
+        						y = y+1;
+        						orientacion = 2;
+        					}
+        					break;
+        				case 2:
+        					break;
+        			}
+        			break;
                 }
                 if(!PA){
-                	k = 3;
-                	orientacion = 3;
+                	matriz[x+1][y]= 0;
+        			switch(matriz[x+1][y]){
+        				case 0:
+        					k = 3;
+        					matriz[x][y]= 1;
+        					x = x+1;
+        					orientacion = 3;
+        					break;
+        				case 1:
+        					if(PF && PD && PI){
+        						matriz[x][y]=2;
+        						x = x-1;
+        						orientacion = 3;
+        					}
+        					break;
+        				case 2:
+        					break;
+        			}
+        			break;
                 }
                 if(!PI){
-                	k = 3;
-                	orientacion = 3;
-                } 
+                	matriz[x][y-1]= 0;
+        			switch(matriz[x][y-1]){
+        				case 0:
+        					k = 3;
+        					matriz[x][y]= 1;
+        					y = y-1;
+        					orientacion = 0;
+        					break;
+        				case 1:
+        					if(PF && PD && PA){
+        						matriz[x][y]=2;
+        						y = y-1;
+        						orientacion = 0;
+        					}
+        					break;
+        				case 2:
+        					break;
+        			}
+        			break;
+                }
+                break;
         }
         return k;
     }
