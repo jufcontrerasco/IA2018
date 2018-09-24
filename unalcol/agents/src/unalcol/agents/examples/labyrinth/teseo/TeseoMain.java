@@ -2,6 +2,7 @@ package unalcol.agents.examples.labyrinth.teseo;
 import unalcol.agents.Agent;
 
 import unalcol.agents.examples.labyrinth.*;
+import unalcol.agents.examples.labyrinth.teseo.simple.IrrationalAgents;
 import unalcol.agents.examples.labyrinth.teseo.simple.Israel;
 import unalcol.agents.examples.labyrinth.teseo.simple.RandomReflexTeseo;
 import unalcol.agents.simulate.util.*;
@@ -17,7 +18,7 @@ public class TeseoMain {
   public static void main( String[] argv ){
     //  InteractiveAgentProgram p = new InteractiveAgentProgram( getLanguage() );
 //    TeseoSimple p = new TeseoSimple();
-    Israel p = new Israel();
+	IrrationalAgents p = new IrrationalAgents();
     p.setLanguage(getLanguage());
     LabyrinthDrawer.DRAW_AREA_SIZE = 600;
     LabyrinthDrawer.CELL_SIZE = 40;
