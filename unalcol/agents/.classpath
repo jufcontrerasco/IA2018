@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/agents.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/awtgui.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/core.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/data.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/defs.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/demo.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/evolution.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/funpl.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/gui.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/langcore.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/math.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/mysql-connector-java-5.1.37-bin.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/optimization.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/primitives.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/random.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/reflection.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/rsyntaxtextarea-3.0.0-SNAPSHOT.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/services.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/types.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/vc.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Users/Daniel/Documents/GitHub/IA2018/unalcol/libs/vcl.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/juanc/Documents/GitHub/unalcol/libs/types.jar"/>
+	<classpathentry kind="lib" path="C:/Users/juanc/Documents/GitHub/unalcol/libs/optimization.jar"/>
+	<classpathentry kind="lib" path="C:/Users/juanc/Documents/GitHub/unalcol/libs/random.jar"/>
+	<classpathentry kind="lib" path="C:/Users/juanc/Documents/GitHub/unalcol/libs/gui.jar"/>
+	<classpathentry kind="lib" path="C:/Users/juanc/Documents/GitHub/unalcol/libs/defs.jar"/>
+	<classpathentry kind="lib" path="C:/Users/juanc/Documents/GitHub/unalcol/libs/awtgui.jar"/>
+	<classpathentry kind="lib" path="C:/Users/juanc/Documents/GitHub/unalcol/libs/core.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
