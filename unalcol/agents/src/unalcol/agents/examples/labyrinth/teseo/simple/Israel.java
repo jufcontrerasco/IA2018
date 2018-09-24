@@ -62,7 +62,6 @@ public class Israel  extends SimpleTeseoAgentProgram {
                         case 2:
                             visitados_bien +=1;
                             break;
-                            
                     }
                 }
                 if(!PA){
