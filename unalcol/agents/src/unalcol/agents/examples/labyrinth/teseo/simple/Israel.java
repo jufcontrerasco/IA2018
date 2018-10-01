@@ -15,6 +15,7 @@ public class Israel  extends SimpleTeseoAgentProgram {
     private int x;
     private int y;
     private int aux=0;
+    private int pasos = 0;
 
 
     public Israel() {
@@ -396,7 +397,8 @@ public class Israel  extends SimpleTeseoAgentProgram {
                 y = y-1;
                 break;
         }
-
+        pasos +=1;
+        System.out.println("Numero de pasos: "+pasos);
         return k;
     }
 }
