@@ -3,7 +3,6 @@ import unalcol.agents.Agent;
 
 import unalcol.agents.examples.labyrinth.*;
 import unalcol.agents.examples.labyrinth.teseo.simple.AgenteIrracional;
-import unalcol.agents.examples.labyrinth.teseo.simple.IrrationalAgents;
 import unalcol.agents.examples.labyrinth.teseo.simple.Israel;
 import unalcol.agents.examples.labyrinth.teseo.simple.RandomReflexTeseo;
 import unalcol.agents.simulate.util.*;

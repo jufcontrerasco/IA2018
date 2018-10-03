@@ -8,8 +8,8 @@ import unalcol.agents.simulate.util.SimpleLanguage;
 
 
 /*
- * eater1 = 293
- * eater2 = 224
+ * eater1 = 289
+ * eater2 = 216
  * segundo = 93
  */
 public class AgenteIrracional extends SimpleTeseoAgentProgram {
@@ -106,6 +106,7 @@ public class AgenteIrracional extends SimpleTeseoAgentProgram {
 	public int accion(boolean PF, boolean PD, boolean PA, boolean PI, boolean MT, boolean FAIL) {
 		if (MT)return -1;		
 		int k = 5;
+		int cierres=0;
 		Percibir(PF,PD, PA, PI, matriz, x, y, or);		
 		System.out.println("Actuar");
 		
@@ -119,6 +120,7 @@ public class AgenteIrracional extends SimpleTeseoAgentProgram {
 		System.out.println("Orientacion: "+or);				
 		
 		
+				
 		switch(or){	
 		
 		case 0: //Mirando al norte
@@ -139,6 +141,25 @@ public class AgenteIrracional extends SimpleTeseoAgentProgram {
 			if(matriz[x][y+1]==3 && paredes >= 2){
 				matriz[x][y] = 3;
 			}
+			
+			//Cierres
+			
+			if(matriz[x][y-1] == 3 && !PF ){
+				cierres+=1;
+			}
+			if(matriz[x][y+1] == 3 && !PA){
+				cierres+=1;
+			}
+			if(matriz[x-1][y] == 3 && !PI){
+				cierres+=1;
+			}
+			if(matriz[x+1][y] == 3 && !PD){
+				cierres+=1;
+			}
+			if(cierres == 2 ){
+				matriz[x][y] = 3;
+			}
+			
 
 			if(matriz[x][y-1] == 1 && !PF){		
 					k = 0;
@@ -220,7 +241,25 @@ public class AgenteIrracional extends SimpleTeseoAgentProgram {
 			if(matriz[x-1][y]==3 && paredes >= 2){
 				matriz[x][y] = 3;
 			}
-
+			
+			//Cierres
+			
+			if(matriz[x][y-1] == 3 && !PI ){
+				cierres+=1;
+			}
+			if(matriz[x][y+1] == 3 && !PD){
+				cierres+=1;
+			}
+			if(matriz[x-1][y] == 3 && !PA){
+				cierres+=1;
+			}
+			if(matriz[x+1][y] == 3 && !PF){
+				cierres+=1;
+			}
+			if(cierres == 2 ){
+				matriz[x][y] = 3;
+			}
+				
 			if(matriz[x+1][y] == 1 && !PF){		
 				k = 0;
 				matriz[x+1][y] = 2;
@@ -300,13 +339,30 @@ public class AgenteIrracional extends SimpleTeseoAgentProgram {
 				or = 1;
 				x = x+1;
 				break;
-			}
-			
-			
+			}			
 			
 			if(matriz[x][y-1]==3 && paredes >= 2){
 				matriz[x][y] = 3;
-			}				
+			}	
+			
+			//Cierres
+			
+			if(matriz[x][y-1] == 3 && !PA ){
+				cierres+=1;
+			}
+			if(matriz[x][y+1] == 3 && !PF){
+				cierres+=1;
+			}
+			if(matriz[x-1][y] == 3 && !PD){
+				cierres+=1;
+			}
+			if(matriz[x+1][y] == 3 && !PI){
+				cierres+=1;
+			}
+			
+			if(cierres == 2 ){
+				matriz[x][y] = 3;
+			}
 			
 			if(matriz[x][y+1] == 1 && !PF){		
 				k = 0;
@@ -388,7 +444,26 @@ public class AgenteIrracional extends SimpleTeseoAgentProgram {
 			
 			if(matriz[x+1][y]==3 && paredes >= 2){
 				matriz[x][y] = 3;
-			}			
+			}	
+			
+			//Cierres
+			
+			if(matriz[x][y-1] == 3 && !PD ){
+				cierres+=1;
+			}
+			if(matriz[x][y+1] == 3 && !PI){
+				cierres+=1;
+			}
+			if(matriz[x-1][y] == 3 && !PF){
+				cierres+=1;
+			}
+			if(matriz[x+1][y] == 3 && !PA){
+				cierres+=1;
+			}
+			
+			if(cierres == 2 ){
+				matriz[x][y] = 3;
+			}
 
 			if(matriz[x-1][y] == 1 && !PF){		
 				k = 0;
@@ -461,7 +536,8 @@ public class AgenteIrracional extends SimpleTeseoAgentProgram {
 				}
 			}		
 		
-		}		
+		}
+				
 
 		
         System.out.println("Movimiento:"+k);
